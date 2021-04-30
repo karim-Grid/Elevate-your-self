@@ -1,12 +1,13 @@
 # Elevate-your-self
 # Introduction
-In this project we have explored some data streaming  and data science techniques to prove the following assumption:  Streaming the applications in the Edge+Cloud is much better than streaming them only in the Cloud. The supervisor has given me the opportunity to reserve nodes in different locations to simulate first the Cloud environnement: Powerful nodes in terms of hardware and also to simulate the Edge+Cloud environnement where we mitigate some powerful nodes to be the cloud and other powerless nodes to be the Edge. We have used this reserved nodes to install Storm and then to stream one prototype generator application named : NAMB over the Storm installed. At the end of the streaming, we have retrieved the log files that contain a list of tuples generated in the reserved nodes to parse them and then calculate the throughput and the latency of the streaming of the application NAMB over Storm first in the Cloud only and then in the Edge+Cloud to compare them and check if our assumption is valid or not.
+The project target is to create an AI that will music listeners. I developed a class user_similarity_recommender_py to mesure the similarity between users to recommend to each song his potential listeners: I used collaborative based system to predict what a particular user like based on what other similar users like. This approach is based on user-user filtering by defining a sparce matrix based on a user who liked a special song. I'm seeking to answer a question, for each user, what a song listened by a user, will also be listened by another set of users. 
 # Tools:
-- Grid5000 : is a large-scale and flexible testbed for experiment-driven research in all areas of computer science, with a focus on parallel and distributed computing including Cloud, HPC and Big Data and AI.it provides access to a large amount of resources: 15000 cores, 800 compute-nodes grouped in homogeneous clusters, and featuring various technologies: PMEM, GPU, SSD, NVMe, 10G and 25G Ethernet, Infiniband, Omni-Path.
-- Storm : Apache Storm is a distributed flow processing calculation framework. It uses custom-created "spouts" and "bolts" to define information sources and manipulations for batch processing and continuous data distribution.
-- NAMB : is a prototype application generator that we have executed above Storm in our experimentation's.
+- Google Colab: I uploaded my dataset: out.json file to google colab and then I pre-processed it.
 # Requirements:
  - Pandas
- - Grid5000 account
+ - numpy
+ - itertools
+ - Json and csv
  # Results : 
-   I described clearly in the final report above the experimentation's and the results that we have found after accomplishing the exprimentation's. The script above describe the techniques that we used to parse the log files and calculate the throughput and the latency of the NAMB processing over Storm in the Cloud and the Fog+Cloud environnement's. To sum up, the processing of the applications in the Fog+Cloud environnement is efficient in term of the throughput and the latency compared to the applications processing in the Cloud environnement.
+ - You can use my user_similarity_recommender_py() class to recommend to any music in the dataset the top 100 listeners based on a calculated score.
+ - You can also use my user similarity based collaborative filtering model to find similar users to any users in the dataset.
